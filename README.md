@@ -13,7 +13,7 @@ Para centralizar e tornar mais facil a utilização da API disponibilizada, foi 
 
 Para instalar a lib é nescessario instala-la
 
-```npm install brasi-api-promise```
+```npm install brasil-api-promise```
 
 ## Funções
 
