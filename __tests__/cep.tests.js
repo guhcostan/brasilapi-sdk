@@ -1,4 +1,4 @@
-import {fetchCep} from "../index";
+import {fetchCep} from "../lib/index";
 
 beforeAll(() => {
     global.fetch = require("node-fetch");
