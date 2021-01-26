@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "covarage": "jest --collectCoverage",
-    "build": "babel src/index.js -d lib"
+    "build": "babel src/index.js -d ."
   },
   "repository": {
     "type": "git",
