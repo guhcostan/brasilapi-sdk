@@ -20,9 +20,9 @@ Para instalar a lib é nescessario instala-la
 ### Buscar cep - fetchCep
 
 ```javascript
-import { fetchCep } from 'brasil-api-promise'
+import { getCep } from 'brasil-api-promise'
 
-fetchCep('05010000').then(response => {
+getCep('05010000').then(response => {
     console.log(response)
 }).catch(error => {
     console.error(error)
@@ -57,7 +57,3 @@ fetchCep('05010000').then(response => {
   "type": "system"
 }
 ```
-
-### Futuro
-
-Por enquanto só possuimos a rota de CEP implementada na API, então a lib só suporta isso, porém quando for lançadas novas rotas, iremos evoluindo a lib.
