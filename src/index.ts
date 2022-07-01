@@ -74,3 +74,29 @@ export const getEstados = async () => {
 export const getEstadoBySigla = async (siglaUF: string) => {
    return await fetchJson(IBGE_API_ESTADOS, siglaUF);
 }
+
+const BrasilAPI = {
+   cep: () => ({
+      getCep,
+      getCepV2
+   }),
+   bank: () => ({
+      getBanks,
+      getBankByCode
+   }),
+   getCnpj,
+   getDDD,
+   getFeriadosByAno,
+   veicles: () => ({
+      getTabelaFipe,
+      getTabelaFipeByTipoVeiculo,
+      getPrecoVeiculoByCodigoFipe
+   }),
+   location: () => ({
+      getMunicipios,
+      getEstadoBySigla,
+      getEstados
+   })
+}
+
+export default BrasilAPI
