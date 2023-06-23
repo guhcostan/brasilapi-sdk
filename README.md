@@ -61,7 +61,7 @@ const cepResult = await cepApi.getCep('05010000')
 ```javascript
 import BrasilAPI from 'brasil-api-promise'
 
-const feraidos = await BrasilAPI.getFeriadosByAno(1997)
+const feriados = await BrasilAPI.getFeriadosByAno(1997)
 
 ```
 
