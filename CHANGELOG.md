@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] - 2026-03-07
 
+### Changed
+- **BREAKING**: Package renamed from `brasil-api-promise` to `brasilapi-sdk`
+- Repository renamed to match new package name
+
+## [2.0.0-beta] - 2026-03-07
+
 ### Added
 
 - Complete TypeScript rewrite with full type definitions

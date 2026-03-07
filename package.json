@@ -1,5 +1,5 @@
 {
-  "name": "brasil-api-promise",
+  "name": "brasilapi-sdk",
   "version": "2.0.0",
   "description": "TypeScript SDK for Brasil API - Query Brazilian postal codes (CEP), companies (CNPJ), banks, FIPE vehicle prices, IBGE data, holidays, and more",
   "main": "./dist/index.cjs",
@@ -32,11 +32,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guhcostan/brasil-api-promisse.git"
+    "url": "git+https://github.com/guhcostan/brasilapi-sdk.git"
   },
   "keywords": [
-    "brasil-api",
     "brasilapi",
+    "brasil-api",
     "brasil",
     "brazil",
     "cep",
@@ -62,9 +62,9 @@
   "author": "guhcostan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guhcostan/brasil-api-promisse/issues"
+    "url": "https://github.com/guhcostan/brasilapi-sdk/issues"
   },
-  "homepage": "https://github.com/guhcostan/brasil-api-promisse#readme",
+  "homepage": "https://github.com/guhcostan/brasilapi-sdk#readme",
   "engines": {
     "node": ">=18.0.0"
   },

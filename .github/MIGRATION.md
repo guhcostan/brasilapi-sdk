@@ -2,7 +2,11 @@
 
 ## Overview
 
-Version 2.0 is a complete rewrite of brasil-api-promise with modern TypeScript, ESM support, and many new features.
+Version 2.0 is a complete rewrite of the SDK (formerly `brasil-api-promise`, now `brasilapi-sdk`) with modern TypeScript, ESM support, and many new features.
+
+## Package Name Change
+
+The package has been renamed from `brasil-api-promise` to `brasilapi-sdk` for better clarity and consistency.
 
 ## Breaking Changes
 
@@ -119,7 +123,9 @@ const result: CepResponse = await cep().getCep('05010000');
 ## Migration Steps
 
 1. **Update Node.js** to version 18 or higher
-2. **Update package**: `npm install brasil-api-promise@^2.0.0`
+2. **Uninstall old package**: `npm uninstall brasil-api-promise`
+3. **Install new package**: `npm install brasilapi-sdk`
+4. **Update imports**: Change `brasil-api-promise` to `brasilapi-sdk` in all files
 3. **Update imports** if using CommonJS:
    ```javascript
    const BrasilAPI = require('brasil-api-promise').default;
