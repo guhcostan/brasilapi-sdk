@@ -2,13 +2,13 @@
 
 ![Brasil API Banner](./banner.png)
 
-# Brasil API Promise
+# BrasilAPI SDK
 
 **TypeScript SDK for Brasil API - Access Brazilian data with type safety and modern features**
 
-[![npm version](https://img.shields.io/npm/v/brasil-api-promise?style=flat-square&color=green)](https://www.npmjs.com/package/brasil-api-promise)
-[![npm downloads](https://img.shields.io/npm/dm/brasil-api-promise?style=flat-square&color=blue)](https://www.npmjs.com/package/brasil-api-promise)
-[![CI](https://img.shields.io/github/actions/workflow/status/guhcostan/brasil-api-promisse/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/guhcostan/brasil-api-promisse/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/brasilapi-sdk?style=flat-square&color=green)](https://www.npmjs.com/package/brasilapi-sdk)
+[![npm downloads](https://img.shields.io/npm/dm/brasilapi-sdk?style=flat-square&color=blue)](https://www.npmjs.com/package/brasilapi-sdk)
+[![CI](https://img.shields.io/github/actions/workflow/status/guhcostan/brasilapi-sdk/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/guhcostan/brasilapi-sdk/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen?style=flat-square&logo=node.js)](https://nodejs.org)
@@ -146,7 +146,7 @@ A modern, production-ready TypeScript SDK for [Brasil API](https://brasilapi.com
 ## 📦 Installation
 
 ```bash
-npm install brasil-api-promise
+npm install brasilapi-sdk
 ```
 
 **Requirements:** Node.js >= 18.0.0 (for native fetch support)
@@ -156,7 +156,7 @@ npm install brasil-api-promise
 ## 🎯 Quick Start
 
 ```typescript
-import BrasilAPI from 'brasil-api-promise';
+import BrasilAPI from 'brasilapi-sdk';
 
 // Query a postal code
 const address = await BrasilAPI.cep().getCep('05010-000');
@@ -180,7 +180,7 @@ console.log(holidays[0].name); // "Confraternização mundial"
 Query Brazilian postal codes with automatic fallback between providers.
 
 ```typescript
-import { cep } from 'brasil-api-promise';
+import { cep } from 'brasilapi-sdk';
 
 // Basic CEP lookup
 const result = await cep().getCep('05010-000');
@@ -210,7 +210,7 @@ console.log(resultV2.location);
 Get complete company information from Receita Federal.
 
 ```typescript
-import { cnpj } from 'brasil-api-promise';
+import { cnpj } from 'brasilapi-sdk';
 
 const company = await cnpj().getCnpj('19.131.243/0001-97');
 
@@ -224,7 +224,7 @@ console.log(company.cnaes_secundarios); // Secondary activities
 List all Brazilian banks or get specific bank information.
 
 ```typescript
-import { banks } from 'brasil-api-promise';
+import { banks } from 'brasilapi-sdk';
 
 // List all banks
 const allBanks = await banks().getBanks();
@@ -237,7 +237,7 @@ console.log(bb.fullName); // "Banco do Brasil S.A."
 ### DDD (Area Code)
 
 ```typescript
-import { ddd } from 'brasil-api-promise';
+import { ddd } from 'brasilapi-sdk';
 
 const info = await ddd().getDDD(11);
 console.log(info.state); // "SP"
@@ -247,7 +247,7 @@ console.log(info.cities); // ["São Paulo", "Guarulhos", ...]
 ### National Holidays
 
 ```typescript
-import { feriados } from 'brasil-api-promise';
+import { feriados } from 'brasilapi-sdk';
 
 const holidays = await feriados().getFeriadosByAno(2024);
 
@@ -259,7 +259,7 @@ holidays.forEach(holiday => {
 ### FIPE (Vehicle Prices)
 
 ```typescript
-import { fipe } from 'brasil-api-promise';
+import { fipe } from 'brasilapi-sdk';
 
 const fipeModule = fipe();
 
@@ -280,7 +280,7 @@ console.log(prices[0].valor); // "R$ 6.022,00"
 ### IBGE (Geographic Data)
 
 ```typescript
-import { ibge } from 'brasil-api-promise';
+import { ibge } from 'brasilapi-sdk';
 
 const ibgeModule = ibge();
 
@@ -297,7 +297,7 @@ const cities = await ibgeModule.getMunicipios('SP');
 ### Currency Exchange
 
 ```typescript
-import { cambio } from 'brasil-api-promise';
+import { cambio } from 'brasilapi-sdk';
 
 const cambioModule = cambio();
 
@@ -312,7 +312,7 @@ console.log(rate.cotacoes[0].cotacao_compra); // 5.7702
 ### Stock Brokers
 
 ```typescript
-import { corretoras } from 'brasil-api-promise';
+import { corretoras } from 'brasilapi-sdk';
 
 const corretorasModule = corretoras();
 
@@ -326,7 +326,7 @@ const xp = await corretorasModule.getCorretoraByCode('02332886000104');
 ### Weather (CPTEC)
 
 ```typescript
-import { cptec } from 'brasil-api-promise';
+import { cptec } from 'brasilapi-sdk';
 
 const cptecModule = cptec();
 
@@ -349,7 +349,7 @@ const ocean = await cptecModule.getPrevisaoOceano(241, 3);
 ### Book Information (ISBN)
 
 ```typescript
-import { isbn } from 'brasil-api-promise';
+import { isbn } from 'brasilapi-sdk';
 
 const book = await isbn().getIsbn('9788545702870');
 
@@ -361,7 +361,7 @@ console.log(book.publisher); // Publisher name
 ### NCM Codes
 
 ```typescript
-import { ncm } from 'brasil-api-promise';
+import { ncm } from 'brasilapi-sdk';
 
 const ncmModule = ncm();
 
@@ -378,7 +378,7 @@ const all = await ncmModule.getAllNcm();
 ### PIX Participants
 
 ```typescript
-import { pix } from 'brasil-api-promise';
+import { pix } from 'brasilapi-sdk';
 
 const participants = await pix().getParticipantes();
 ```
@@ -386,7 +386,7 @@ const participants = await pix().getParticipantes();
 ### Domain Status (.br)
 
 ```typescript
-import { registroBr } from 'brasil-api-promise';
+import { registroBr } from 'brasilapi-sdk';
 
 const domain = await registroBr().getDomainStatus('google.com.br');
 console.log(domain.status); // Domain status
@@ -395,7 +395,7 @@ console.log(domain.status); // Domain status
 ### Interest Rates
 
 ```typescript
-import { taxas } from 'brasil-api-promise';
+import { taxas } from 'brasilapi-sdk';
 
 const taxasModule = taxas();
 
@@ -418,7 +418,7 @@ import {
   NotFoundError, 
   ValidationError, 
   NetworkError 
-} from 'brasil-api-promise';
+} from 'brasilapi-sdk';
 
 try {
   const result = await cep().getCep('00000000');
@@ -451,7 +451,7 @@ try {
 The SDK uses automatic retry logic with exponential backoff:
 
 ```typescript
-import { BrasilAPIClient } from 'brasil-api-promise';
+import { BrasilAPIClient } from 'brasilapi-sdk';
 
 const client = new BrasilAPIClient();
 
@@ -510,9 +510,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🔗 Links
 
 - 📚 [Brasil API Documentation](https://brasilapi.com.br/docs)
-- 📦 [NPM Package](https://www.npmjs.com/package/brasil-api-promise)
-- 🐙 [GitHub Repository](https://github.com/guhcostan/brasil-api-promisse)
-- 🐛 [Report Issues](https://github.com/guhcostan/brasil-api-promisse/issues)
+- 📦 [NPM Package](https://www.npmjs.com/package/brasilapi-sdk)
+- 🐙 [GitHub Repository](https://github.com/guhcostan/brasilapi-sdk)
+- 🐛 [Report Issues](https://github.com/guhcostan/brasilapi-sdk/issues)
 - 📖 [Migration Guide v1→v2](.github/MIGRATION.md)
 - 📝 [Changelog](CHANGELOG.md)
 
@@ -520,10 +520,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Package Stats
 
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/brasil-api-promise?style=flat-square&label=minzipped)
-![npm type definitions](https://img.shields.io/npm/types/brasil-api-promise?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/guhcostan/brasil-api-promisse?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/guhcostan/brasil-api-promisse?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/brasilapi-sdk?style=flat-square&label=minzipped)
+![npm type definitions](https://img.shields.io/npm/types/brasilapi-sdk?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/guhcostan/brasilapi-sdk?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/guhcostan/brasilapi-sdk?style=flat-square)
 
 ---
 
