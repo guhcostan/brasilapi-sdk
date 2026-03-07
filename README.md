@@ -7,6 +7,9 @@
 </div>
 
 ## Motivo
+
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub_Sponsors-ea4aaa?style=flat&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/guhcostan)
+
 Para centralizar e tornar mais facil a utilização da API disponibilizada, foi criada funções especificas abstraindo aplicação de API.
 
 ## Utilização
